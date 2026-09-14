@@ -105,6 +105,7 @@ header.scrubber{
   gap: 56px;
   align-items: center;
 }
+.hero .wrap > *{ min-width: 0; }
 @media (max-width: 880px){
   .hero .wrap{ grid-template-columns: 1fr; }
   .hero-frame{ order: -1; }
@@ -234,13 +235,19 @@ h3.entry-title{
 .transcript .entry:nth-child(even) .entry-copy{ grid-column: 3; justify-self: end; text-align: left; }
 
 @media (max-width: 880px){
-  .entry, .transcript .entry:nth-child(even){ grid-template-columns: 1fr; gap: 18px; }
-  .entry .tc{ grid-column: 1; order: -2; }
+  /* switch off grid entirely here — the desktop rules pin every item to
+     grid-row:1, which on a single mobile column stacks them on top of
+     each other instead of one after another. Flex with order sidesteps
+     that regardless of what the desktop grid-row/grid-column rules say. */
+  .entry, .transcript .entry:nth-child(even){
+    display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
+  }
+  .entry .tc{ order: -2; }
   .entry .vframe, .transcript .entry:nth-child(even) .vframe{
-    grid-column: 1; order: -1; width: auto; max-width: 280px; justify-self: start;
+    order: -1; width: 100%; max-width: 300px;
   }
   .entry .entry-copy, .transcript .entry:nth-child(even) .entry-copy{
-    grid-column: 1; justify-self: stretch;
+    order: 0; text-align: left;
   }
 }
 
@@ -331,7 +338,8 @@ footer.site .wrap{
 
 /* ---------- privacy / doc page ---------- */
 .doc-shell{ max-width: 920px; margin: 0 auto; padding: 56px 24px 120px; display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; }
-@media (max-width: 760px){ .doc-shell{ grid-template-columns: 1fr; } }
+.doc-shell > *{ min-width: 0; }
+@media (max-width: 760px){ .doc-shell{ grid-template-columns: minmax(0,1fr); } }
 .doc-stamp{ font-family: var(--mono); font-size: 12px; color: var(--text-dim); margin-bottom: 40px; }
 .doc-stamp b{ color: var(--text); font-weight: 500; }
 nav.toc{ position: sticky; top: 96px; align-self: start; font-size: 13px; }
