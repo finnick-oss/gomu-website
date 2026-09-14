@@ -10,124 +10,145 @@
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap">
+<header class="scrubber">
+  <div class="wrap scrubber-top">
     <a class="brand" href="/">
       <img src="/logo.png" alt="Gomu">
       <span>Gomu</span>
     </a>
-    <nav class="links">
-      <a class="navlink" href="#how-it-works">How it works</a>
-      <a class="navlink" href="#why-gomu">Why Gomu</a>
-      <a class="navlink" href="/privacy.html">Privacy</a>
-      <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
-        <img src="/app-store-badge.svg" alt="Download on the App Store">
-      </a>
-    </nav>
+    <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
+      <img src="/app-store-badge.svg" alt="Download on the App Store">
+    </a>
+  </div>
+  <div class="scrub-track">
+    <div class="scrub-marks">
+      <a class="scrub-mark" href="#top"><span class="lbl">00:00 — Gomu</span></a>
+      <a class="scrub-mark" href="#tap"><span class="lbl">00:08 — Tap any word</span></a>
+      <a class="scrub-mark" href="#review"><span class="lbl">00:15 — Spaced review</span></a>
+      <a class="scrub-mark" href="#level"><span class="lbl">00:21 — Matched to you</span></a>
+      <a class="scrub-mark" href="#streak"><span class="lbl">00:27 — Streaks</span></a>
+      <a class="scrub-mark" href="#unlock"><span class="lbl">00:33 — Achievements</span></a>
+      <a class="scrub-mark" href="#specs"><span class="lbl">00:40 — Why Gomu</span></a>
+      <a class="scrub-mark" href="/privacy.html"><span class="lbl">Privacy</span></a>
+    </div>
   </div>
 </header>
 
-<main>
-  <section class="hero" style="border-top:none; padding-top:64px;">
+<main id="top">
+  <section class="hero" style="border-top:none;">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dot"></span>プライバシー重視 · iOS のみ · 日本語</span>
-        <h1 class="hero-title">Learn Japanese<br>by <em>watching</em>.</h1>
+        <div class="gloss"><span class="reading">がくしゅう</span></div>
+        <h1 class="hero-title">Learn Japanese<br>by <span class="hl">watching</span>.</h1>
         <p class="hero-lede">Gomu turns real Japanese video — dramas, interviews, news, and creators — into a language lesson you actually want to scroll through. Tap any word, save it, review it with spaced repetition.</p>
         <div class="hero-ctas">
           <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
             <img src="/app-store-badge.svg" alt="Download on the App Store">
           </a>
-          <a class="btn ghost" href="#how-it-works">See how it works</a>
+          <a class="btn ghost" href="#tap">Watch how it works ↓</a>
         </div>
-        <div class="hero-note">Available on iPhone · N5–N1 · No ads, no tracking</div>
+        <div class="hero-spec">
+          <span><b>N5–N1</b> JLPT range</span>
+          <span><b>iPhone</b> only, for now</span>
+          <span><b>0</b> ads or trackers</span>
+        </div>
       </div>
-      <div class="hero-visual">
-        <div class="phone-stack">
-          <img class="phone back" src="/screenshots/04_matched_level.png" alt="">
-          <img class="phone front" src="/screenshots/01_hero.png" alt="Gomu app feed showing a real Japanese video clip with tappable subtitles">
+      <div class="hero-frame">
+        <div class="vframe">
+          <div class="vframe-chrome">
+            <span class="rec">REC 0:07 / 0:30</span>
+            <span>N4 · やさしい日本語</span>
+          </div>
+          <div class="vframe-media">
+            <img src="/screenshots/01_hero.png" alt="Gomu feed showing a real Japanese video clip with tappable subtitles">
+          </div>
+          <div class="vframe-caption">
+            <div class="jp">また <span class="word">どこかで</span> 会いましょう</div>
+            <div class="en">"dokoka de" — somewhere, sometime — tap for reading &amp; meaning</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="how-it-works">
+  <section id="tap-section">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-kicker">How it works</div>
+        <div class="gloss"><span class="reading">つかいかた</span></div>
         <h2 class="section-title">Every scroll teaches you something real.</h2>
       </div>
 
-      <div class="feature-row">
-        <div class="feature-copy">
-          <div class="feature-num">01</div>
-          <h3 class="feature-title">Tap any word. Instantly.</h3>
-          <p class="feature-body">Subtitles under every clip are fully tappable — get the reading, romaji, and meaning of any word the second you hear it, without leaving the video.</p>
+      <div class="transcript">
+        <div class="entry" id="tap">
+          <div class="tc"><b>00:08</b>0:08 / 0:30</div>
+          <div>
+            <h3 class="entry-title">Tap any word. Instantly.</h3>
+            <p class="entry-body">Subtitles under every clip are fully tappable — get the reading, romaji, and meaning of any word the second you hear it, without leaving the video.</p>
+          </div>
+          <div class="vframe">
+            <div class="vframe-media"><img src="/screenshots/02_tap_any_word.png" alt="Tapping a word in the subtitles to see its meaning and reading"></div>
+          </div>
         </div>
-        <div class="feature-visual">
-          <img class="phone" src="/screenshots/02_tap_any_word.png" alt="Tapping a word in the subtitles to see its meaning and reading">
-        </div>
-      </div>
 
-      <div class="feature-row reverse">
-        <div class="feature-copy">
-          <div class="feature-num">02</div>
-          <h3 class="feature-title">Spaced review, done right.</h3>
-          <p class="feature-body">Words you save get scheduled automatically — the ones you're about to forget come back sooner, the ones you know well come back less. No manual deck-building.</p>
+        <div class="entry" id="review">
+          <div class="tc"><b>00:15</b>0:15 / 0:30</div>
+          <div>
+            <h3 class="entry-title">Spaced review, done right.</h3>
+            <p class="entry-body">Words you save get scheduled automatically — the ones you're about to forget come back sooner, the ones you know well come back less. No manual deck-building.</p>
+          </div>
+          <div class="vframe">
+            <div class="vframe-media"><img src="/screenshots/03_spaced_review.png" alt="Spaced-repetition flashcard review screen"></div>
+          </div>
         </div>
-        <div class="feature-visual">
-          <img class="phone" src="/screenshots/03_spaced_review.png" alt="Spaced-repetition flashcard review screen">
-        </div>
-      </div>
 
-      <div class="feature-row">
-        <div class="feature-copy">
-          <div class="feature-num">03</div>
-          <h3 class="feature-title">Every clip, matched to you.</h3>
-          <p class="feature-body">Pick your JLPT level — N5 through N1 — and the feed personalizes itself. Beginners never get thrown into native-speed news; advanced learners never get baby talk.</p>
+        <div class="entry" id="level">
+          <div class="tc"><b>00:21</b>0:21 / 0:30</div>
+          <div>
+            <h3 class="entry-title">Every clip, matched to you.</h3>
+            <p class="entry-body">Pick your JLPT level — N5 through N1 — and the feed personalizes itself. Beginners never get thrown into native-speed news; advanced learners never get baby talk.</p>
+          </div>
+          <div class="vframe">
+            <div class="vframe-media"><img src="/screenshots/04_matched_level.png" alt="Feed personalized to a chosen JLPT level"></div>
+          </div>
         </div>
-        <div class="feature-visual">
-          <img class="phone" src="/screenshots/04_matched_level.png" alt="Feed personalized to a chosen JLPT level">
-        </div>
-      </div>
 
-      <div class="feature-row reverse">
-        <div class="feature-copy">
-          <div class="feature-num">04</div>
-          <h3 class="feature-title">Streaks that actually stick.</h3>
-          <p class="feature-body">A daily streak, a heatmap of your activity, and unlockable achievements — the same habit loops that make short video addictive, pointed at something worth remembering.</p>
+        <div class="entry" id="streak">
+          <div class="tc"><b>00:27</b>0:27 / 0:30</div>
+          <div>
+            <h3 class="entry-title">Streaks that actually stick.</h3>
+            <p class="entry-body">A daily streak, a heatmap of your activity, and unlockable achievements — the same habit loops that make short video addictive, pointed at something worth remembering.</p>
+          </div>
+          <div class="vframe">
+            <div class="vframe-media"><img src="/screenshots/05_streaks.png" alt="Daily streak and activity heatmap"></div>
+          </div>
         </div>
-        <div class="feature-visual">
-          <img class="phone" src="/screenshots/05_streaks.png" alt="Daily streak and activity heatmap">
-        </div>
-      </div>
 
-      <div class="feature-row">
-        <div class="feature-copy">
-          <div class="feature-num">05</div>
-          <h3 class="feature-title">Unlock as you learn.</h3>
-          <p class="feature-body">Badges and milestones for the things that actually mark progress — words saved, clips watched, streaks kept — so growth feels like something, not just a number.</p>
-        </div>
-        <div class="feature-visual">
-          <img class="phone" src="/screenshots/06_achievements.png" alt="Achievement badges unlocked in the app">
+        <div class="entry" id="unlock">
+          <div class="tc"><b>00:33</b>0:33 / 0:30</div>
+          <div>
+            <h3 class="entry-title">Unlock as you learn.</h3>
+            <p class="entry-body">Badges and milestones for the things that actually mark progress — words saved, clips watched, streaks kept — so growth feels like something, not just a number.</p>
+          </div>
+          <div class="vframe">
+            <div class="vframe-media"><img src="/screenshots/06_achievements.png" alt="Achievement badges unlocked in the app"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="why-gomu">
+  <section id="specs">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-kicker">Why Gomu</div>
+        <div class="gloss"><span class="reading">なぜ ごむ</span></div>
         <h2 class="section-title">Textbook Japanese and real spoken Japanese are different languages.</h2>
       </div>
-      <div class="stat-strip">
-        <div class="stat"><div class="n">N5–N1</div><div class="l">Full JLPT range, personalized</div></div>
-        <div class="stat"><div class="n">≤30s</div><div class="l">Per clip — built for a real habit</div></div>
-        <div class="stat"><div class="n">0</div><div class="l">Ad networks or trackers</div></div>
-        <div class="stat"><div class="n">1 tap</div><div class="l">To delete your account, anytime</div></div>
+      <div class="ticker">
+        <div class="tick"><div class="n">N5<span class="u">→</span>N1</div><div class="l">Full JLPT range, personalized</div></div>
+        <div class="tick"><div class="n">30<span class="u">s</span></div><div class="l">Max per clip — built for a real habit</div></div>
+        <div class="tick"><div class="n">0<span class="u">×</span></div><div class="l">Ad networks or trackers</div></div>
+        <div class="tick"><div class="n">1<span class="u">tap</span></div><div class="l">To delete your account, anytime</div></div>
       </div>
-      <div style="height:32px"></div>
       <div class="pillbar">
         <span class="pill">Real creator clips, credited</span>
         <span class="pill">No ad targeting</span>
@@ -138,18 +159,14 @@
     </div>
   </section>
 
-  <section>
+  <section class="outro">
     <div class="wrap">
-      <div class="cta-band">
-        <span class="eyebrow" style="justify-content:center;"><span class="dot"></span>Play. Watch. Speak Japanese.</span>
-        <h2>Start learning from real Japanese today.</h2>
-        <p>Free to download. iPhone, iOS 15.1 or later.</p>
-        <div class="hero-ctas">
-          <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
-            <img src="/app-store-badge.svg" alt="Download on the App Store">
-          </a>
-        </div>
-      </div>
+      <div class="gloss"><span class="reading">はじめよう</span></div>
+      <h2 class="outro-title">Start learning from real Japanese today.</h2>
+      <p>Free to download. iPhone, iOS 15.1 or later. Play. Watch. Speak Japanese.</p>
+      <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
+        <img src="/app-store-badge.svg" alt="Download on the App Store">
+      </a>
     </div>
   </section>
 </main>
@@ -166,7 +183,7 @@
     <div class="foot-links">
       <div class="foot-col">
         <span class="h">Product</span>
-        <a href="#how-it-works">How it works</a>
+        <a href="#tap">How it works</a>
         <a href="https://apps.apple.com/app/id6811935681">Download</a>
       </div>
       <div class="foot-col">
@@ -180,8 +197,8 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 Gomu</span>
-    <span>Made for Japanese learners, N5 to N1.</span>
+    <span>© 2026 GOMU</span>
+    <span>MADE FOR JAPANESE LEARNERS, N5 TO N1</span>
   </div>
 </footer>
 
