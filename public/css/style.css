@@ -193,7 +193,7 @@ h2.section-title{
 .transcript{ display: flex; flex-direction: column; }
 .entry{
   display: grid;
-  grid-template-columns: 108px 1fr;
+  grid-template-columns: 108px 1fr 260px;
   gap: 32px;
   padding: 40px 0;
   border-top: 1px solid var(--border);
@@ -201,6 +201,7 @@ h2.section-title{
 }
 .transcript .entry:last-child{ border-bottom: 1px solid var(--border); }
 .entry .tc{
+  grid-column: 1;
   font-family: var(--mono); font-size: 13px; color: var(--text-faint);
 }
 .entry .tc b{ color: var(--amber); display: block; font-size: 11px; letter-spacing: 0.08em; margin-bottom: 4px; }
@@ -213,37 +214,33 @@ h3.entry-title{
 }
 .entry-body{ color: var(--text-dim); font-size: 15px; max-width: 38ch; margin: 0; }
 
-/* copy + image sit together as one tight pair, always the same gap apart
-   and vertically centered on each other — the pair as a whole hugs one
-   side of the row, alternating which. */
-.entry-pair{
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: flex-end;
-}
-.entry .entry-copy{ flex: 0 1 400px; }
-.entry .vframe{ flex: 0 0 240px; }
+/* the wrapper is layout-inert — its two children become direct grid items
+   of .entry, so they land in their own named columns instead of being
+   coupled to each other. */
+.entry-pair{ display: contents; }
 
-/* even rows: mirror the pair — image first (left), text after it (right),
-   hugging the left side of the row instead of the right. */
-.transcript .entry:nth-child(even) .entry-pair{
-  flex-direction: row-reverse;
-  /* row-reverse flips which physical edge "start" means, so flex-end here
-     is what actually hugs the LEFT edge, mirroring the odd rows' flex-end. */
-  justify-content: flex-end;
-}
+/* odd rows: text sits in the flexible middle column, left-aligned so it
+   starts right next to the timecode; image fills its own fixed column,
+   flush at the far right edge. */
+.entry .entry-copy{ grid-column: 2; justify-self: start; }
+.entry .vframe{ grid-column: 3; width: 100%; }
+
+/* even rows: swap which column is fixed vs. flexible, and swap which
+   element sits where — image now flush left (next to the timecode),
+   text pushed to the far right edge of the row. */
+.transcript .entry:nth-child(even){ grid-template-columns: 108px 260px 1fr; }
+.transcript .entry:nth-child(even) .vframe{ grid-column: 2; }
+.transcript .entry:nth-child(even) .entry-copy{ grid-column: 3; justify-self: end; text-align: left; }
 
 @media (max-width: 880px){
-  .entry{ grid-template-columns: 1fr; gap: 18px; }
-  .entry-pair, .transcript .entry:nth-child(even) .entry-pair{
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 18px;
+  .entry, .transcript .entry:nth-child(even){ grid-template-columns: 1fr; gap: 18px; }
+  .entry .tc{ grid-column: 1; order: -2; }
+  .entry .vframe, .transcript .entry:nth-child(even) .vframe{
+    grid-column: 1; order: -1; width: auto; max-width: 280px; justify-self: start;
   }
-  .entry .vframe{ flex-basis: auto; max-width: 280px; }
-  .entry .entry-copy{ flex-basis: auto; max-width: none; }
+  .entry .entry-copy, .transcript .entry:nth-child(even) .entry-copy{
+    grid-column: 1; justify-self: stretch;
+  }
 }
 
 /* ---------- spec ticker ---------- */
