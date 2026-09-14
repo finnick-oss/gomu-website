@@ -72,30 +72,29 @@ header.scrubber{
 
 .scrub-track{
   position: relative;
-  height: 34px;
+  height: 46px;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: stretch;
-}
-.scrub-track::before{
-  content: '';
-  position: absolute; left: 0; right: 0; top: 50%;
-  height: 1px; background: var(--border);
+  background: var(--bg-raised);
 }
 .scrub-marks{ display: flex; width: 100%; overflow-x: auto; scrollbar-width: none; }
 .scrub-marks::-webkit-scrollbar{ display: none; }
 .scrub-mark{
   flex: 0 0 auto;
-  display: flex; align-items: center; gap: 8px;
-  padding: 0 18px;
-  font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+  display: flex; align-items: center; gap: 9px;
+  padding: 0 20px;
+  font-family: var(--mono); font-size: 12.5px; font-weight: 500;
+  color: var(--text-dim);
   border-right: 1px solid var(--border);
   white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
 }
-.scrub-mark::before{ content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--text-faint); }
-.scrub-mark:hover{ color: var(--text); }
-.scrub-mark:hover::before{ background: var(--violet); }
-@media (max-width: 720px){ .scrub-mark span.lbl{ display:none; } }
+.scrub-mark .t{ color: var(--amber); }
+.scrub-mark::before{ content: '▸'; font-size: 9px; color: var(--text-faint); }
+.scrub-mark:hover{ color: var(--text); background: var(--surface); }
+.scrub-mark:hover::before{ color: var(--violet); }
+@media (max-width: 720px){ .scrub-mark{ font-size: 11.5px; padding: 0 14px; } }
 
 /* ---------- hero ---------- */
 .hero{ padding: 64px 0 88px; }
@@ -200,14 +199,10 @@ h2.section-title{
   align-items: center;
 }
 .transcript .entry:last-child{ border-bottom: 1px solid var(--border); }
-@media (max-width: 880px){
-  .entry{ grid-template-columns: 1fr; gap: 18px; }
-  .entry .tc{ order: -2; }
-  .entry .vframe{ order: -1; max-width: 280px; }
-}
 .entry .tc{
   font-family: var(--mono); font-size: 13px; color: var(--text-faint);
   padding-top: 4px;
+  order: 1;
 }
 .entry .tc b{ color: var(--amber); display: block; font-size: 11px; letter-spacing: 0.08em; margin-bottom: 4px; }
 h3.entry-title{
@@ -218,8 +213,20 @@ h3.entry-title{
   text-wrap: balance;
 }
 .entry-body{ color: var(--text-dim); font-size: 15px; max-width: 42ch; margin: 0; }
-.entry .vframe{ max-width: 220px; justify-self: end; }
-@media (max-width: 880px){ .entry .vframe{ justify-self: start; } }
+.entry .entry-copy{ order: 2; }
+.entry .vframe{ max-width: 220px; justify-self: end; order: 3; }
+
+/* alternate the screenshot left/right down the transcript */
+.transcript .entry:nth-child(even){ grid-template-columns: 108px 300px 1fr; }
+.transcript .entry:nth-child(even) .entry-copy{ order: 3; }
+.transcript .entry:nth-child(even) .vframe{ order: 2; justify-self: start; }
+
+@media (max-width: 880px){
+  .entry, .transcript .entry:nth-child(even){ grid-template-columns: 1fr; gap: 18px; }
+  .entry .tc{ order: -2; }
+  .entry .vframe, .transcript .entry:nth-child(even) .vframe{ order: -1; max-width: 280px; justify-self: start; }
+  .entry .entry-copy, .transcript .entry:nth-child(even) .entry-copy{ order: 0; }
+}
 
 /* ---------- spec ticker ---------- */
 .ticker{
