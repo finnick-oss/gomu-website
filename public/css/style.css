@@ -229,7 +229,9 @@ h3.entry-title{
    hugging the left side of the row instead of the right. */
 .transcript .entry:nth-child(even) .entry-pair{
   flex-direction: row-reverse;
-  justify-content: flex-start;
+  /* row-reverse flips which physical edge "start" means, so flex-end here
+     is what actually hugs the LEFT edge, mirroring the odd rows' flex-end. */
+  justify-content: flex-end;
 }
 
 @media (max-width: 880px){
