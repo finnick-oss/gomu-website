@@ -66,9 +66,9 @@ header.scrubber{
   display: flex; align-items: center; justify-content: space-between;
   height: 60px;
 }
-.brand{ display: flex; align-items: center; gap: 9px; }
-.brand img{ width: 26px; height: 26px; border-radius: 6px; }
-.brand span{ font-family: var(--display); font-weight: 700; font-size: 22px; }
+.brand{ display: flex; align-items: center; gap: 10px; }
+.brand img{ width: 30px; height: 30px; border-radius: 7px; }
+.brand span{ font-family: var(--display); font-weight: 700; font-size: 28px; }
 .badge-btn img{ height: 32px; width: auto; }
 
 .scrub-track{
@@ -95,7 +95,46 @@ header.scrubber{
 .scrub-mark::before{ content: '▸'; font-size: 9px; color: var(--text-faint); }
 .scrub-mark:hover{ color: var(--text); background: var(--surface); }
 .scrub-mark:hover::before{ color: var(--violet); }
-@media (max-width: 720px){ .scrub-mark{ font-size: 11.5px; padding: 0 14px; } }
+/* active section, set by the scrollspy script — a brighter, filled marker
+   instead of just the hover state, so the current section is legible even
+   without a pointer over it. */
+.scrub-mark.active{ color: var(--text); background: var(--surface-2); }
+.scrub-mark.active::before{ content: '●'; color: var(--violet); }
+
+/* ---------- mobile header: hamburger replaces the side-scrolling strip ---------- */
+.hamburger{
+  display: none;
+  width: 38px; height: 38px;
+  align-items: center; justify-content: center;
+  background: transparent; border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); cursor: pointer; flex-shrink: 0;
+}
+.hamburger svg{ width: 18px; height: 18px; display: block; }
+.hamburger .icon-close{ display: none; }
+.hamburger.open .icon-menu{ display: none; }
+.hamburger.open .icon-close{ display: block; }
+
+.mobile-menu{
+  display: none;
+  flex-direction: column;
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border);
+}
+.mobile-menu.open{ display: flex; }
+.mobile-menu a{
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 16px 24px;
+  font-family: var(--mono); font-size: 13px; color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:last-child{ border-bottom: none; }
+.mobile-menu a .t{ color: var(--amber); }
+.mobile-menu a.active{ color: var(--text); background: var(--surface-2); }
+
+@media (max-width: 720px){
+  .scrub-track{ display: none; }
+  .hamburger{ display: flex; }
+}
 
 /* ---------- hero ---------- */
 .hero{ padding: 64px 0 88px; }

@@ -16,9 +16,15 @@
       <img src="/logo.png" alt="Gomu">
       <span>Gomu</span>
     </a>
-    <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
-      <img src="/app-store-badge.svg" alt="Download on the App Store">
-    </a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
+        <img src="/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
   </div>
   <div class="scrub-track">
     <div class="scrub-marks">
@@ -27,6 +33,11 @@
       <a class="scrub-mark" href="#collect"><span class="lbl">This page</span></a>
     </div>
   </div>
+  <nav class="mobile-menu" aria-label="Mobile">
+    <a href="/"><span>← Back to Gomu</span></a>
+    <a href="/#tap"><span>How it works</span></a>
+    <a href="/support.html"><span>Support</span></a>
+  </nav>
 </header>
 
 <div class="doc-shell">
@@ -184,5 +195,6 @@
   </div>
 </footer>
 
+<script src="/js/site.js"></script>
 </body>
 </html>
