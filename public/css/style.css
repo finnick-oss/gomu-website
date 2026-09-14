@@ -68,7 +68,7 @@ header.scrubber{
 }
 .brand{ display: flex; align-items: center; gap: 9px; }
 .brand img{ width: 26px; height: 26px; border-radius: 6px; }
-.brand span{ font-family: var(--display); font-weight: 700; font-size: 17px; }
+.brand span{ font-family: var(--display); font-weight: 700; font-size: 22px; }
 .badge-btn img{ height: 32px; width: auto; }
 
 .scrub-track{
@@ -320,10 +320,14 @@ footer.site .wrap{
 .foot-col a:hover{ color: var(--text); }
 .foot-bottom{
   max-width: var(--maxw); margin: 36px auto 0; padding: 20px 24px 0; border-top: 1px solid var(--border);
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
   font-family: var(--mono);
   font-size: 11.5px; color: var(--text-faint);
 }
+.foot-support{ display: flex; align-items: baseline; gap: 8px; }
+.foot-support .label{ text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+.foot-support a{ color: var(--violet); font-size: 13px; font-weight: 500; }
+.foot-support a:hover{ text-decoration: underline; }
 
 /* ---------- privacy / doc page ---------- */
 .doc-shell{ max-width: 920px; margin: 0 auto; padding: 56px 24px 120px; display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; }
