@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gomu Privacy Policy</title>
-<meta name="description" content="Privacy policy for the Gomu iOS app: what we collect, why, and how to delete your data.">
+<meta name="description" content="Privacy policy for the Gomu app on iOS and Android: what we collect, why, who we share it with, and how to delete your data.">
 <link rel="icon" href="/logo.png">
 <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -58,7 +58,7 @@
   </nav>
 
   <main class="doc-main">
-    <div class="doc-stamp">Effective <b>September 15, 2026</b> · Applies to the Gomu iOS app</div>
+    <div class="doc-stamp">Effective <b>October 5, 2026</b> · Applies to the Gomu app on iOS and Android</div>
     <div class="gloss"><span class="reading">きやく</span></div>
     <h1>Privacy at Gomu</h1>
     <p class="lede">Gomu is a Japanese-learning app built around short video clips, saved vocabulary, and spaced-repetition review. This page explains exactly what we collect, why, and how to make us delete it.</p>
@@ -69,11 +69,14 @@
         <table class="glance-table">
           <thead><tr><th>Data type</th><th>Examples</th><th>Why</th></tr></thead>
           <tbody>
-            <tr><td class="dtype">Account</td><td class="tag">Email address, encrypted password</td><td class="tag">Sign-in, syncing your progress across devices</td></tr>
+            <tr><td class="dtype">Account</td><td class="tag">Email address and encrypted password — or, with Sign in with Google, your Google name, email, profile photo link, and account ID</td><td class="tag">Sign-in, syncing your progress across devices</td></tr>
             <tr><td class="dtype">Learning profile</td><td class="tag">JLPT level, goals, daily time target</td><td class="tag">Personalizing which clips appear in your feed</td></tr>
             <tr><td class="dtype">Vocabulary &amp; review</td><td class="tag">Saved words, spaced-repetition history</td><td class="tag">Building and scheduling your review deck</td></tr>
             <tr><td class="dtype">Activity</td><td class="tag">Watch history, streaks, achievements</td><td class="tag">Progress stats, streak tracking, badges</td></tr>
             <tr><td class="dtype">Feedback</td><td class="tag">Text you submit via the app</td><td class="tag">Improving Gomu, responding to you</td></tr>
+            <tr><td class="dtype">Purchases</td><td class="tag">Subscription status, plan, trial dates (no card details)</td><td class="tag">Unlocking Premium, restoring purchases</td></tr>
+            <tr><td class="dtype">Usage &amp; diagnostics</td><td class="tag">Screens viewed, taps, session recordings with text fields hidden, device model and OS</td><td class="tag">Finding bugs and improving the app</td></tr>
+            <tr><td class="dtype">Ad measurement</td><td class="tag">Install, onboarding progress, sign-up, trial and purchase events; device advertising ID where you allow it</td><td class="tag">Measuring which of our ads brought you to Gomu</td></tr>
           </tbody>
         </table>
       </div>
@@ -82,6 +85,7 @@
     <section id="collect">
       <h2><span class="num">01</span>What we collect</h2>
       <p>When you create an account, we collect your <strong>email address</strong>. Your password is handled by our authentication provider (Supabase) and is never stored by us in plain text.</p>
+      <p>If you choose <strong>Sign in with Google</strong>, we don't receive a password. Google confirms who you are and shares your <strong>name, email address, profile photo link, and Google account ID</strong> with us, which we use only to create and sign in to your Gomu account. We don't get access to anything else in your Google account.</p>
       <p>As you use Gomu, we store the data needed to make the app work:</p>
       <ul>
         <li><strong>Onboarding answers</strong> — your JLPT level, why you're learning, the challenges you picked, and your daily time goal.</li>
@@ -92,26 +96,36 @@
         <li><strong>Settings</strong> — in-app preferences such as playback and notification settings.</li>
         <li><strong>Feedback</strong> — any message you submit through the feedback form in your profile.</li>
       </ul>
+      <p>We also collect some data automatically:</p>
+      <ul>
+        <li><strong>Usage and diagnostics</strong> — which screens you open and what you tap, plus recordings of app sessions, so we can see where the app is confusing or broken. Every text field (such as your email, password and feedback) is hidden in these recordings. Device details such as model, operating system and app version come along with them.</li>
+        <li><strong>Ad measurement events</strong> — when you install and open the app, how far you get through onboarding, and whether you sign up, start a trial or subscribe. These are linked to a random Gomu account ID, never your name or email.</li>
+        <li><strong>Advertising ID</strong> — your device's advertising identifier, used to tell whether you arrived from one of our ads. On iOS we only access it if you allow tracking when asked; on Android you can reset or delete it at any time in your device settings.</li>
+      </ul>
       <p class="dim">We do not collect your precise location, contacts, photos, or microphone/camera data — Gomu doesn't request access to any of these.</p>
     </section>
 
     <section id="use">
       <h2><span class="num">02</span>How we use it</h2>
-      <p>We use your data only to run and improve Gomu: personalizing your feed by JLPT level, scheduling your vocabulary reviews, tracking streaks and achievements, keeping your account signed in and synced, and reading feedback you send us.</p>
+      <p>We use your data to run and improve Gomu: personalizing your feed by JLPT level, scheduling your vocabulary reviews, tracking streaks and achievements, keeping your account signed in and synced, handling your subscription, reading feedback you send us, and understanding how people use the app so we can fix problems.</p>
+      <p>We advertise Gomu on Facebook, Instagram and TikTok. To know which ads work, we report installs and key in-app steps (finishing onboarding, signing up, starting a trial, subscribing) back to Meta and TikTok. This measures our own ad campaigns.</p>
       <div class="pillbar" style="margin-bottom:14px;">
-        <span class="pill">No ad targeting</span>
+        <span class="pill">No ads inside Gomu</span>
         <span class="pill">No data sold</span>
-        <span class="pill">No analytics SDKs</span>
-        <span class="pill">No third-party trackers</span>
+        <span class="pill">No name or email shared with ad networks</span>
       </div>
-      <p class="dim">Gomu has no advertising or analytics/tracking SDKs integrated — there's simply no ad or analytics network we'd be feeding your data to.</p>
+      <p class="dim">Gomu shows no ads in the app. On iOS you can decline tracking when the app asks, or later in Settings → Privacy &amp; Security → Tracking; ad measurement then relies only on Apple's privacy-preserving reports. On Android you can reset or delete your advertising ID in Settings → Privacy → Ads.</p>
     </section>
 
     <section id="share">
       <h2><span class="num">03</span>Who we share it with</h2>
-      <p>We don't sell or rent your data. It's only shared with the infrastructure providers that make the app work, each acting on our instructions:</p>
+      <p>We don't sell or rent your data. It's only shared with the service providers below, for the purposes described:</p>
       <ul>
         <li><strong>Supabase</strong> — hosts our database and handles account authentication.</li>
+        <li><strong>Google</strong> — only if you use Sign in with Google, to verify your identity when you sign in.</li>
+        <li><strong>RevenueCat</strong> — manages subscriptions bought through the App Store or Google Play. Payments themselves are handled by Apple or Google; we never see your card details.</li>
+        <li><strong>PostHog</strong> — product analytics and session recordings (with text fields hidden), to understand how the app is used and fix problems.</li>
+        <li><strong>Meta (Facebook, Instagram)</strong> and <strong>TikTok</strong> — receive the ad measurement events and advertising ID described above, to measure our ad campaigns. Their use of this data is covered by <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a> and <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener">TikTok's Privacy Policy</a>.</li>
       </ul>
       <p>We may also disclose data if required by law, or to protect the rights, safety, or property of Gomu or our users.</p>
     </section>
@@ -125,7 +139,8 @@
     <section id="retention">
       <h2><span class="num">05</span>Retention &amp; deletion</h2>
       <p>We keep your data for as long as your account is active. You can permanently delete your account at any time from <strong>Profile → Danger Zone → Delete account</strong> — this removes your saved words, progress, streaks, achievements, feedback, and your login itself. It can't be undone.</p>
-      <div class="callout"><strong>No support ticket needed.</strong> Account deletion is a single in-app action, and it removes the underlying login, not just your app data.</div>
+      <div class="callout"><strong>No support ticket needed.</strong> Account deletion is a single in-app action, and it removes the underlying login, not just your app data. If you signed in with Google, Gomu is also disconnected from your Google account.</div>
+      <p>Don't have the app anymore? You can also request deletion by email — see <a href="/delete-account">Delete your Gomu account</a>. We complete email requests within 30 days. We don't keep any account data after deletion; copies in our hosting provider's routine backups are permanently removed within 30 days.</p>
     </section>
 
     <section id="security">
@@ -139,7 +154,7 @@
       <ul>
         <li><strong>Access</strong> your data — most of it is visible directly in the app (Profile, Vocab, review history).</li>
         <li><strong>Correct</strong> your onboarding answers and settings from within the app.</li>
-        <li><strong>Delete</strong> your account and all associated data in-app, or by emailing us.</li>
+        <li><strong>Delete</strong> your account and all associated data in-app, or by emailing us — see <a href="/delete-account">how to delete your account</a>.</li>
       </ul>
       <p class="dim">If you're in a region with additional statutory rights (such as the EU/UK or California), those rights apply to you as provided by law, and you can reach us at the email below to exercise them.</p>
     </section>
@@ -179,6 +194,7 @@
       <div class="foot-col">
         <span class="h">Legal</span>
         <a href="/privacy.html">Privacy Policy</a>
+        <a href="/delete-account">Delete account</a>
       </div>
       <div class="foot-col">
         <span class="h">Contact</span>

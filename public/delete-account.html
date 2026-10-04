@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Gomu Account</title>
+<meta name="description" content="How to delete your Gomu account and all associated data — in the app, or without the app by email.">
+<link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .steps{ counter-reset: step; list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-direction: column; gap: 10px; }
+  .steps li{
+    counter-increment: step; position: relative;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 18px 14px 56px; font-size: 15px;
+  }
+  .steps li::before{
+    content: counter(step); position: absolute; left: 18px; top: 13px;
+    width: 24px; height: 24px; border-radius: 999px; display: grid; place-items: center;
+    font-family: var(--mono); font-size: 12px; color: var(--violet); border: 1px solid var(--violet);
+  }
+  .option-label{ font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--violet); margin: 0 0 6px; }
+  .contact-card{
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    margin: 14px 0 8px;
+  }
+  .contact-card h3{ font-family: var(--display); font-weight: 700; font-size: 17px; margin: 0 0 4px; }
+  .contact-card p{ margin: 0; color: var(--text-dim); font-size: 14px; max-width: 46ch; }
+  section{ margin-bottom: 40px; }
+</style>
+</head>
+<body>
+
+<header class="scrubber">
+  <div class="wrap scrubber-top">
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="Gomu">
+      <span>Gomu</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="badge-btn" href="https://apps.apple.com/app/id6811935681" aria-label="Download on the App Store">
+        <img src="/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="scrub-track">
+    <div class="scrub-marks">
+      <a class="scrub-mark" href="/"><span class="lbl">← Back to Gomu</span></a>
+      <a class="scrub-mark" href="/privacy"><span class="lbl">Privacy Policy</span></a>
+      <a class="scrub-mark" href="/support"><span class="lbl">Support</span></a>
+    </div>
+  </div>
+  <nav class="mobile-menu" aria-label="Mobile">
+    <a href="/"><span>← Back to Gomu</span></a>
+    <a href="/privacy"><span>Privacy Policy</span></a>
+    <a href="/support"><span>Support</span></a>
+  </nav>
+</header>
+
+<div class="doc-shell" style="grid-template-columns: 1fr; max-width: 760px;" id="top">
+  <main class="doc-main">
+    <div class="gloss"><span class="reading">さくじょ</span></div>
+    <h1>Delete your Gomu account</h1>
+    <p class="lede">You can permanently delete your <strong>Gomu</strong> account and all of its data at any time — from inside the app, or without the app by emailing us. This applies to Gomu on iPhone and Android, and to accounts created with email or with Google.</p>
+
+    <section id="in-app">
+      <p class="option-label">Option 1 · In the app (instant)</p>
+      <h2>Delete it yourself in Gomu</h2>
+      <ol class="steps">
+        <li>Open Gomu and sign in.</li>
+        <li>Go to the <strong>Profile</strong> tab and scroll down to <strong>Danger zone</strong>.</li>
+        <li>Tap <strong>Delete account</strong>, then confirm twice.</li>
+      </ol>
+      <p class="dim">Your account and data are deleted immediately, and you're signed out. If you signed in with Google, Gomu is also disconnected from your Google account.</p>
+    </section>
+
+    <section id="by-email">
+      <p class="option-label">Option 2 · Without the app</p>
+      <h2>Ask us to delete it</h2>
+      <p>No longer have the app installed, or can't sign in? Email us and we'll delete your account for you.</p>
+      <div class="contact-card">
+        <div>
+          <h3>Email a deletion request</h3>
+          <p>Send it from the email address on your Gomu account (for Google sign-in, your Google email) with the subject <strong>"Delete my Gomu account"</strong>.</p>
+        </div>
+        <a class="btn" href="mailto:anvelopers368@gmail.com?subject=Delete%20my%20Gomu%20account">anvelopers368@gmail.com</a>
+      </div>
+      <p class="dim">To protect your account, we only act on requests sent from the account's own email address, and we may reply to confirm before deleting. We complete the deletion within 30 days and email you when it's done.</p>
+    </section>
+
+    <section id="what">
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your <strong>login</strong> — email and password, or your Google sign-in link</li>
+        <li>Your <strong>profile and onboarding answers</strong> — JLPT level, goals, daily target</li>
+        <li><strong>Saved words</strong> and their full review history</li>
+        <li><strong>Watch history</strong>, <strong>daily activity and streaks</strong>, and <strong>achievements</strong></li>
+        <li>Your <strong>settings</strong> and any <strong>feedback</strong> you sent from the app</li>
+      </ul>
+    </section>
+
+    <section id="kept">
+      <h2>What we keep, and for how long</h2>
+      <p>We don't keep any of your account data after deletion. Copies that may remain in our hosting provider's routine database backups expire and are permanently removed within <strong>30 days</strong>.</p>
+      <p class="dim">Deleting your Gomu account doesn't affect your Google account. Video playback is handled by YouTube under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>; Gomu doesn't hold that data. See our <a href="/privacy">Privacy Policy</a> for everything we collect.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="foot-brand">
+        <img src="/logo.png" alt="Gomu">
+        <span>Gomu</span>
+      </div>
+      <div class="foot-jp">学べば学ぶほど、話せるようになる。</div>
+    </div>
+    <div class="foot-links">
+      <div class="foot-col">
+        <span class="h">Product</span>
+        <a href="/#tap">How it works</a>
+        <a href="https://apps.apple.com/app/id6811935681">Download</a>
+      </div>
+      <div class="foot-col">
+        <span class="h">Legal</span>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/delete-account">Delete account</a>
+      </div>
+      <div class="foot-col">
+        <span class="h">Contact</span>
+        <a href="mailto:anvelopers368@gmail.com">anvelopers368@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 GOMU</span>
+    <div class="foot-support">
+      <span class="label">Support</span>
+      <a href="mailto:anvelopers368@gmail.com">anvelopers368@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+</body>
+</html>
