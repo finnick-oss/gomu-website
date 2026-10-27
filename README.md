@@ -1,6 +1,6 @@
 # Gomu Website
 
-Marketing site + privacy policy for [Gomu](https://apps.apple.com/app/id6811935681), a Japanese-learning app on the App Store.
+Marketing site + privacy policy for [Gomu](https://play.google.com/store/apps/details?id=com.theapplicationcompany.gomu), a Japanese-learning app on Google Play.
 
 Static HTML/CSS, no build step — deploys on Vercel with zero configuration.
 
@@ -8,7 +8,7 @@ Static HTML/CSS, no build step — deploys on Vercel with zero configuration.
 
 - `index.html` — landing page
 - `privacy.html` — privacy policy
-- `public/` — logo, screenshots, App Store badge
+- `public/` — logo, screenshots, Google Play badge
 - `css/style.css` — shared styles
 
 ## Local preview
