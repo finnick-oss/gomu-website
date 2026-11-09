@@ -70,6 +70,7 @@ header.scrubber{
 .brand img{ width: 30px; height: 30px; border-radius: 7px; }
 .brand span{ font-family: var(--display); font-weight: 700; font-size: 28px; }
 .badge-btn img{ height: 32px; width: auto; }
+@media (max-width: 520px){ .scrubber-top .badge-btn.appstore{ display: none; } }
 
 .scrub-track{
   position: relative;
@@ -410,3 +411,10 @@ table.glance-table th{ color: var(--text-faint); font-weight: 500; font-size: 11
 table.glance-table tr:last-child td{ border-bottom: none; }
 table.glance-table td.dtype{ font-weight: 500; white-space: nowrap; }
 table.glance-table td.tag{ color: var(--text-dim); }
+
+/* Privacy page: one policy per platform */
+.platform-block{ scroll-margin-top: 96px; }
+.platform-block + .platform-block{ margin-top: 72px; padding-top: 48px; border-top: 1px solid var(--border); }
+.doc-main h2.platform-title{ font-family: var(--display); font-weight: 700; font-size: clamp(24px,3vw,32px); margin: 0 0 10px; }
+.platform-block .doc-stamp{ margin-bottom: 28px; }
+.platform-jump a.pill{ text-decoration: none; }
