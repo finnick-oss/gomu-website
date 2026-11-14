@@ -84,7 +84,7 @@
 
     <div id="ios" class="platform-block">
     <h2 class="platform-title">Gomu for iPhone &amp; iPad</h2>
-    <div class="doc-stamp">Effective <b>November 10, 2026</b> · Applies to the Gomu app from the App Store</div>
+    <div class="doc-stamp">Effective <b>November 15, 2026</b> · Applies to the Gomu app from the App Store</div>
 
     <div class="glance">
       <div class="glance-head">At a glance — data the iOS app collects</div>
@@ -96,14 +96,16 @@
             <tr><td class="dtype">Learning profile</td><td class="tag">JLPT level, reasons and challenges, daily goal, reminder time, settings</td><td class="tag">Picking clips for your level, your daily goal and reminder</td></tr>
             <tr><td class="dtype">Learning activity</td><td class="tag">Saved words, review answers, clips watched, minutes per day, streaks, achievements</td><td class="tag">Your review schedule, stats and streak</td></tr>
             <tr><td class="dtype">Feedback &amp; support</td><td class="tag">Messages you send through the app, with your account email and app version</td><td class="tag">Replying to you, improving Gomu</td></tr>
+            <tr><td class="dtype">Purchases</td><td class="tag">Your subscription plan, status and renewal dates from the App Store (never your payment details)</td><td class="tag">Unlocking Premium, restoring purchases</td></tr>
+            <tr><td class="dtype">App usage</td><td class="tag">Screens you open and features you use (for example clips watched, words saved, the paywall shown), with your account ID, app version, device model and iOS version</td><td class="tag">Understanding how Gomu is used, fixing problems, improving the app</td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="pillbar" style="margin:-24px 0 40px;">
-      <span class="pill">No in-app purchases</span>
+      <span class="pill">Subscriptions through the App Store</span>
       <span class="pill">No ads</span>
-      <span class="pill">No analytics or advertising SDKs</span>
+      <span class="pill">No advertising SDKs</span>
       <span class="pill">No tracking</span>
     </div>
 
@@ -114,13 +116,15 @@
         <li><strong>Onboarding answers and settings</strong> — your JLPT level, why you're learning, the challenges you picked, your daily goal, reminder time and app preferences.</li>
         <li><strong>Learning data</strong> — words you save, your review answers and schedule, clips you've watched, minutes watched per day, streaks and achievements.</li>
         <li><strong>Feedback and support</strong> — messages you send through the app, with your account email and the app version, so we can reply.</li>
+        <li><strong>Purchases</strong> — if you subscribe to Gomu Premium, your plan, subscription status and renewal dates. Payment is handled entirely by Apple through the App Store; we never see your card or payment details.</li>
+        <li><strong>App usage</strong> — which screens you open and which features you use (for example clips watched, words saved, reviews done, the paywall shown or a purchase started), linked to your account ID, along with your app version, device model and iOS version. We use this product analytics only to understand how Gomu is used and to improve it. Text you type, such as your email and password, is never recorded, and we don't make screen recordings.</li>
       </ul>
-      <p class="dim">We don't collect your location, contacts, photos, camera, microphone, health or payment data. The iOS app has no ads, no in-app purchases, and no analytics or advertising SDKs, and it doesn't track you across other companies' apps or websites.</p>
+      <p class="dim">We don't collect your location, contacts, photos, camera, microphone, health or payment card data. The iOS app has no ads and no advertising SDKs, and it doesn't track you across other companies' apps or websites.</p>
     </section>
 
     <section id="ios-use">
       <h2><span class="num">02</span>How we use it</h2>
-      <p>Only to run Gomu: keep you signed in, sync your progress, pick clips for your level, schedule reviews, track your streak and daily goal, send the daily reminder you chose, and answer your messages. We don't sell or rent your data, and we don't use it for advertising.</p>
+      <p>To run Gomu: keep you signed in, sync your progress, pick clips for your level, schedule reviews, track your streak and daily goal, send the daily reminder you chose, unlock Premium if you subscribe, and answer your messages. We also use app usage data to understand which features help people learn and to find and fix problems. We don't sell or rent your data, and we don't use it for advertising.</p>
     </section>
 
     <section id="ios-share">
@@ -128,6 +132,9 @@
       <ul>
         <li><strong>Supabase</strong> — hosts our database and handles sign-in.</li>
         <li><strong>Apple and Google</strong> — only if you use their sign-in, to confirm who you are.</li>
+        <li><strong>Apple (App Store)</strong> — processes subscription payments, renewals and refunds.</li>
+        <li><strong>RevenueCat</strong> — manages your subscription status for us, using your account ID and the App Store's purchase records. It never receives your payment details.</li>
+        <li><strong>PostHog</strong> — product analytics: receives the app usage data described above, linked to your account ID. Session recordings are turned off in the iOS app.</li>
         <li><strong>YouTube (Google)</strong> — clips play in YouTube's embedded player. When you play a clip, YouTube may collect data about that playback, such as your IP address and device information, under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. Every clip credits its channel and links to the original video.</li>
         <li><strong>Jisho and Tatoeba</strong> — when you look up a word or open examples, the word is sent to them to fetch results. We don't send your account details.</li>
       </ul>
@@ -141,7 +148,7 @@
 
     <section id="ios-retention">
       <h2><span class="num">05</span>Retention &amp; deletion</h2>
-      <p>We keep your data while your account is active. Delete your account at any time in the app: <strong>Profile → Delete account</strong>. This permanently removes your saved words, progress, streaks, achievements, feedback, support messages and your login, and it revokes Sign in with Apple. It can't be undone.</p>
+      <p>We keep your data while your account is active. Delete your account at any time in the app: <strong>Profile → Delete account</strong>. This permanently removes your saved words, progress, streaks, achievements, feedback, support messages and your login, and it revokes Sign in with Apple. It can't be undone. Deleting your account doesn't cancel an App Store subscription — cancel it in your Apple ID's subscription settings. Purchase records kept by Apple and RevenueCat and app usage data in PostHog can be deleted on request by email.</p>
       <p>You can also ask us by email — see <a href="/delete-account">Delete your Gomu account</a>. We complete requests within 30 days, and copies in routine backups are removed within 30 days.</p>
     </section>
 
